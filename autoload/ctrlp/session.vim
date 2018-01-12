@@ -45,7 +45,7 @@ endif
 "
 " Return: command
 function! ctrlp#session#init()
-  return g:ctrlp_sessions
+  return split(globpath(g:ctrlp_sessions_dir, '*'), '\n')
 endfunction
 
 

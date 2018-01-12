@@ -12,8 +12,8 @@ function! s:error(msg)
 endfunction
 
 
-if !exists('g:ctrlp_sessions')
-    command! CtrlPSession call s:error("Please specify your Session.vim file paths in g:ctrlp_sessions variable")
+if !exists('g:ctrlp_sessions_dir')
+    command! CtrlPSession call s:error("Please specify your Session.vim file paths in g:ctrlp_sessions_dir variable")
 else
     command! CtrlPSession call ctrlp#init(ctrlp#session#id())
 endif
